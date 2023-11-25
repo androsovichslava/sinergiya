@@ -27,13 +27,14 @@ body {
     height: 125px;
     padding: 10px;
     display: grid;
-    justify-items: end;
-    align-items: end;
+    /* justify-items: end; */
+    /* align-items: end; */
     margin-bottom: 10px;
     background-color: #97c4fe;
 }
 
-.calc-screen p {
+.result {
+    align-self: end;
     text-align: right;
     font-size: 4rem;
     margin: 0;
@@ -41,6 +42,8 @@ body {
 }
 
 .memory-screen {
+
+    align-self: start;
     width: 100%;
     font-size: 1rem;
     text-align: left;

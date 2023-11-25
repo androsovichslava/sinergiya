@@ -3,23 +3,25 @@ let b = ''; //second number
 let m = '0'; // memory
 let sign = ''; //operation sign
 let finish = false;
+let calcError = false;
 
 const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'];
 const action = ['-', '+', 'x', '/', '+/-', 'M+', 'M-', 'MR', 'MC', '%'];
 
 //screen 
-const out = document.querySelector('.calc-screen p');
+const out = document.querySelector('.result');
 console.log(out)
 out.addEventListener('DOMSubtreeModified', function () {
     const newTextLength = out.textContent.length;
+    console.log(newTextLength)
     if (newTextLength < 8) {
         out.style.fontSize = '4rem';
     } else if (newTextLength >= 8 && newTextLength < 14) {
-        out.style.fontSize = '2rem';
+        out.style.fontSize = '2.5rem';
     } else {
-        out.style.fontSize = '1rem';
+        out.style.fontSize = '1.4rem';
     }
-    console.log('Текст изменен:', out.textContent.length);
+    console.log('Текст изменен:', out.textContent.length, out.style.fontSize);
 
 });
 
@@ -31,6 +33,7 @@ function clearAll() {
     finish = false;
     out.textContent = '0';
     memoryScreen.textContent = 'Memory: 0';
+    culcError = false;
 }
 // получаем экран памяти
 const memoryScreen = document.querySelector('.memory-screen');
@@ -46,7 +49,7 @@ buttons.addEventListener('click', (event) => {
     // если покали на АС то тоже возврат, так как она уже обработана clearAll
     if (event.target.classList.contains('ac')) return;
     // очистка экрана
-    out.textContent = '';
+    if (!calcError) out.textContent = '';
     // получаю нажатую кнопку
     const key = event.target.textContent;
     // debugger
@@ -127,7 +130,8 @@ buttons.addEventListener('click', (event) => {
         return;
     }
     // нажата =
-    if (key === '=') {
+    if (key === '=' && !calcError) {
+        // debugger
         if (b === '') b = a;
         switch (sign) {
             case '+':
@@ -137,11 +141,12 @@ buttons.addEventListener('click', (event) => {
                 a = a - b;
                 break;
             case 'x':
+
                 a = a * b;
                 break;
             case '/':
                 if (b === '0') {
-                    out.textContent = 'Ошибка';
+                    out.textContent = 'Ошибка, деление на ноль';
                     a = '';
                     b = '';
                     sign = '';
@@ -160,6 +165,11 @@ buttons.addEventListener('click', (event) => {
                 a = (a / b) * 100;
                 break;
 
+        }
+        // debugger
+        if (a === Infinity) {
+            a = 'Ошибка переполнения';
+            calcError = true;
         }
         finish = true;
         out.textContent = a;
