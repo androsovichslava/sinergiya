@@ -33,7 +33,7 @@ function clearAll() {
     finish = false;
     out.textContent = '0';
     memoryScreen.textContent = 'Memory: 0';
-    culcError = false;
+    calcError = false;
 }
 // получаем экран памяти
 const memoryScreen = document.querySelector('.memory-screen');
