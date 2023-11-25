@@ -1,21 +1,40 @@
 let a = ''; // first number
 let b = ''; //second number
+let m = '0'; // memory
 let sign = ''; //operation sign
 let finish = false;
 
 const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'];
-const action = ['-', '+', 'x', '/', '+/-', '%'];
+const action = ['-', '+', 'x', '/', '+/-', 'M+', 'M-', 'MR', 'MC', '%'];
 
 //screen 
 const out = document.querySelector('.calc-screen p');
 console.log(out)
+out.addEventListener('DOMSubtreeModified', function () {
+    const newTextLength = out.textContent.length;
+    if (newTextLength < 8) {
+        out.style.fontSize = '4rem';
+    } else if (newTextLength >= 8 && newTextLength < 14) {
+        out.style.fontSize = '2rem';
+    } else {
+        out.style.fontSize = '1rem';
+    }
+    console.log('Текст изменен:', out.textContent.length);
+
+});
+
 function clearAll() {
     a = '';
     b = '';
+    m = '';
     sign = '';
     finish = false;
     out.textContent = '0';
+    memoryScreen.textContent = 'Memory: 0';
 }
+// получаем экран памяти
+const memoryScreen = document.querySelector('.memory-screen');
+
 // получаем кнопку сброса АС и вешаем обработчик clearAll
 const ac = document.querySelector('.ac');
 ac.addEventListener('click', clearAll);
@@ -48,8 +67,10 @@ buttons.addEventListener('click', (event) => {
         }
     }
     // проверка нажатия знака
+    // debugger
     if (action.includes(key)) {
         sign = key;
+        console.log(sign);
         if (sign === '+/-') {
             if (b !== '') {
                 b = - (+b);
@@ -61,11 +82,46 @@ buttons.addEventListener('click', (event) => {
                 out.textContent = '0';
                 a = '';
                 b = '';
+                m = '0';
                 sign = '';
             }
 
             return;
         }
+        // debugger
+        if (sign === 'M+') {
+            m = (+m) + (+a);
+            memoryScreen.textContent = 'Memory: ' + m;
+            out.textContent = a;
+            return;
+        }
+        // debugger
+        if (sign === 'M-') {
+            if (b !== '') {
+                m -= b;
+                memoryScreen.textContent = 'Memory: ' + m;
+                out.textContent = b;
+            } else {
+                m -= a;
+                memoryScreen.textContent = 'Memory: ' + m;
+                out.textContent = a;
+            }
+            return;
+        }
+        if (sign === 'MR') {
+            // debugger
+            a = m;
+            memoryScreen.textContent = 'Memory: ' + m;
+            out.textContent = a;
+            return;
+        }
+        if (sign === 'MC') {
+            m = 0;
+            memoryScreen.textContent = 'Memory: ' + m;
+            out.textContent = a;
+            return;
+        }
+
         // console.table(a, b, sign)
         out.textContent = sign;
         return;
@@ -93,10 +149,21 @@ buttons.addEventListener('click', (event) => {
                 }
                 a = a / b;
                 break;
+            case '%':
+                if (b === '0') {
+                    out.textContent = 'Ошибка';
+                    a = '';
+                    b = '';
+                    sign = '';
+                    return;
+                }
+                a = (a / b) * 100;
+                break;
 
         }
         finish = true;
         out.textContent = a;
+        b = '';
         console.table(a, b, sign);
     }
 
