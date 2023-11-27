@@ -1,32 +1,53 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-.container {
+.wrapp {
     width: 100%;
-    height: 160px;
-    background-color: rgba(0, 255, 255, 0.311);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
 }
 
-.tel {
-    width: 33%;
-    height: 150px;
-    background-color: #000;
+.sidebar {
+    width: 20%;
+    height: 100%;
+    background-color: #0b0b0d;
+}
+
+.content {
+    width: 80%;
 }
 
 .logo {
-    width: 33%;
-    height: 150px;
-    background-color: blue;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
 }
 
-.btn-tel {
-    width: 33%;
-    height: 150px;
-    background-color: red;
+.menu {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.menu>ul {
+    list-style-type: none;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu li {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.active:after {
+    content: "";
+    width: 5px;
+    height: 42px;
+    background-image: url(img/Marker.svg);
+    display: block;
+    left: 0;
+    top: -33px;
 }
