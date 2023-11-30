@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.body {
+font-family: 'Oswald', sans-serif;
+}
+.body {
+width: 1440px;
+height: 1760px;
+}
+body {
+background: hsl(294, 40%, 18%) url(../img/car-3075497_1280\ 1.png);
+background-attachment: fixed;
+background-repeat: repeat-x;
+}
+.nav-menu {
+padding-top: 90px;
+}
+.nav-menu-list {
+margin-top: 15px;
+margin-left: 55px;
+color: #e9e0e6;
+line-height: 60px;
+display: block;
+}
+.nav-menu-list-1 {
+margin-top: 700px;
+margin-left: 94px;
+color: #e9e0e6;
+line-height: 60px;
+list-style-type: none;
+display: block;
+}
+.hover span:hover {
+color: rgb(226, 230, 5)
+}
+.logotype {
+background-image: url(../img/YOURLOGO\ b.png);
+width: 249px;
+height: 48px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: 20px;
+margin-left: 40px;
+position:absolute
+}
+.logotype:hover {
+background-image: url(../img/YOURLOGO\ y.png);
+width: 249px;
+height: 48px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: 20px;
+margin-left: 40px;
+position:absolute
+}
+.sidebar {
+margin-top: -550px;
+margin-left: -10px;
+}
+.logo-1 {
+margin-top: 110px;
+margin-left: 600px;
+font-weight:bold;
+font-size:170%
+}
+.logo-2 {
+margin-top: -50px;
+margin-left: 600px;
+font-weight:bold;
+font-size:300%
+}
+.logo-2:hover {
+color: rgb(226, 230, 5)
+}
+.mobile-app-text {
+margin-top: -990px;
+margin-left: 600px;
+color: #e9e0e6;
+}
+p {
+display: block;
+margin-top: -210px;
+font-size: 25px;
+}
+p {
+display: block;
+margin-top: 10px;
+font-size: 25px;
+}
+p {
+display: block;
+margin-top: 10px;
+font-size: 25px;
+}
+Ul {
+list-style: none;
+} 
+a {
+text-decoration: none;
+color: #e9e0e6;
+}
+.block  {
+background-image: url('../img/Luna\ b.png');
+width: 259px;
+height: 156px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: 200px;
+margin-left: 600px;
+}
+.block-1 {
+background-image: url('../img/Fon\ b.png');
+width: 259px;
+height: 156px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: -160px;
+margin-left: 980px;
+}
+.block-2 {
+background-image: url('../img/Kosmo\ b.png');
+width: 259px;
+height: 156px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top:-160px;
+margin-left: 1380px;
+}
+.block-3 {
+background-image: url('../img/Man\ b.png');
+width: 259px;
+height: 156px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: -160px;
+margin-left: 1780px;
+}
+.block-4 {
+background-image: url('../img/Sidebar.png');
+width: 384px;
+height: 1496px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: -950px;
+margin-left: -10px;
+}
+.news {
+margin-top: -510px;
+margin-left:600px;
+font-size: 40px;
+color: #e9e0e6;
+font-family: 'Oswald', sans-serif;
+}
+.block-5 {
+background-image: url('../img/Triger.png');
+width: 37px;
+height: 34px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: -55px;
+margin-left: 660px;
+}
+.block-6 {
+margin-top: 10px;
+font-size: 20px;
+margin-left: 600px;
+color: #e9e0e6;
+white-space: nowrap;
+}
+.block:hover  {
+background-image: url('../img/Luna.png');
+width: 259px;
+height: 156px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: 200px;
+margin-left: 600px;
+}
+.block-1:hover {
+background-image: url('../img/Fon.png');
+width: 259px;
+height: 156px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: -160px;
+margin-left: 980px;
+}
+.block-2:hover {
+background-image: url('../img/Kosmo.png');
+width: 259px;
+height: 156px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top:-160px;
+margin-left: 1380px;
+}
+.block-3:hover {
+background-image: url('../img/Man.png');
+width: 259px;
+height: 156px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: -160px;
+margin-left: 1780px;
+}
+.block-5:hover {
+background-image: url('../img/Triger\ y.png');
+width: 37px;
+height: 34px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: -55px;
+margin-left: 660px;
+  }
+.block-7 {
+background-image: url('../img/Button\ b.png');
+width: 354px;
+height: 83px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: -450px;
+margin-left: 600px;
+}
+.block-7:hover {
+background-image: url('../img/Button\ y.png');
+width: 354px;
+height: 83px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: -450px;
+margin-left: 600px;
+}
+.block-8 {
+background-image: url('../img/Social.png');
+width: 232px;
+height: 76px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+margin-top: -675px;
+margin-left: 1720px;
+}
+.block-8:hover {
+background-image: url('../img/Social\ y.png');
+width: 232px;
+height: 76px;
+background-position: center;
+-webkit-background-size: cover;
+background-size: cover;
+ margin-top: -675px;
+margin-left: 1720px;
+}
+.active-link {
+  color: #A276FF;
+}
