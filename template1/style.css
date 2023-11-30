@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik:wght@400;700&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 * {
     margin: 0;
@@ -188,4 +189,112 @@ body {
 
 .copyright a {
     color: #555;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+}
+
+.news_title {
+    padding: 10px;
+    color: #fff;
+
+    font-family: Oswald;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 100px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.news_title img {
+    margin-left: 20px;
+
+    position: relative;
+    /* top: 20px; */
+
+}
+
+.news_content {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+.article_wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: azure;
+
+    border: 2px solid #FFFFFF;
+    border-radius: 41px;
+    padding: 114px;
+}
+
+.article_title {
+    color: #111;
+    font-family: Oswald;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 165.688%;
+    /* 92.785px */
+}
+
+hr {
+    width: 89px;
+    height: 7px;
+    background-color: #a276ff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.short_article {
+    color: #111;
+
+    /* Body font */
+    font-family: Roboto;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 155.187%;
+}
+
+.article_subtitle {
+    color: #111;
+    font-family: Oswald;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 165.688%;
+    margin-top: 20px;
+}
+
+.article_paragraph {
+    color: #111;
+
+    /* Body font */
+    font-family: Roboto;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155.187%;
+    margin-top: 20px;
+}
+
+.img_caption {
+    text-align: center;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 165.688%;
+    /* 21.539px */
 }
