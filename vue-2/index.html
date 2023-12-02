@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+    <div class="wrapper">
+        <h1>Список дел</h1>
+        <p>Список дел — главный конкурент и отличная альтернатива Any.do. В приложении нет разве что самоуничтожающегося дерева. В Todoist можно разбивать задачи по проектам и подпроектам, добавлять теги, изменять тему, добавлять комментарии, прикреплять файлы и вести совместные проекты. В качестве дополнительной мотивации в сервис встроен трекинг продуктивности. Некоторые функции, включая напоминания и добавление задач по email, доступны только в премиум-версии приложения.</p>
+        <input type="text" v-model="item" placeholder="Введи задачу">
+        <button @click="add_list()" v-if="item==''" disabled>Добавить</button>
+        <button @click="add_list()" v-else>Добавить</button>
+        <hr>
+        <ul>
+            <li v-for="(text_item, index) in list">
+                {{text_item}} <span @click="deleteItem(index)">X</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
