@@ -6,7 +6,15 @@ const App = {
 createApp({
     data() {
         return {
-            message: 'Hello'
+            list: [],
+            item: ''
         }
-    }
+    },
+    methods: {
+        add_list() {
+            this.list.push(this.item);
+            this.item = '';
+            console.log(this.list);
+        }
+    },
 }).mount('#app');

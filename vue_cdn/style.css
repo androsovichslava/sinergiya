@@ -35,7 +35,14 @@
     line-height: 30px;
 
     font-size: 20px;
-    color: #888;
+    color: #120202;
+    text-transform: uppercase;
+    padding: 0 15px;
+}
+
+.wrapper button:disabled {
+
+    color: #aaa;
     text-transform: uppercase;
     padding: 0 15px;
 }
