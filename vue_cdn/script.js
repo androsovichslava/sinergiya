@@ -15,6 +15,12 @@ createApp({
             this.list.push(this.item);
             this.item = '';
             console.log(this.list);
+        },
+        deleteItem(index) {
+            this.list.splice(index, 1);
+        },
+        sort_list() {
+            this.list.sort();
         }
     },
 }).mount('#app');

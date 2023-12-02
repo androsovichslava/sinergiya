@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 
 .wrapper {
+    display: flex;
+    flex-direction: column;
     width: 800px;
     margin: auto;
     margin-top: 100px;
@@ -9,6 +11,18 @@
     font-family: Roboto;
     text-align: center;
     padding: 10px;
+    box-shadow: 9px 9px 13px 0px rgba(34, 60, 80, 0.2);
+}
+
+.todo_container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.todo_input {
+    display: flex;
+    justify-content: space-between;
 }
 
 .wrapper h1 {
@@ -24,20 +38,42 @@
     text-align: left;
 }
 
+.wrapper li {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 10px;
+    /* justify-content: space-between; */
+}
+
+.hr {
+    width: 100%;
+    height: 1px;
+    margin-top: 5px;
+    background-color: blue;
+}
+
+.todo_item_block {
+    display: flex;
+    justify-content: space-between;
+}
+
 .wrapper input {
-    width: 80%;
+    width: 70%;
     line-height: 30px;
     font-size: 20px;
     color: #888;
 }
 
 .wrapper button {
-    line-height: 30px;
+    line-height: 33px;
 
     font-size: 20px;
     color: #120202;
     text-transform: uppercase;
     padding: 0 15px;
+    /* margin-right: 20px; */
+
 }
 
 .wrapper button:disabled {
@@ -45,4 +81,13 @@
     color: #aaa;
     text-transform: uppercase;
     padding: 0 15px;
+}
+
+.across {
+    color: red;
+    font-weight: 900;
+}
+
+.across:hover {
+    cursor: pointer;
 }

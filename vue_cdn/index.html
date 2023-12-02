@@ -16,14 +16,26 @@
             <p>Чтобы ничего не забыть, лучше составить список. Например, какие фильмы стоит посмотреть или что купить в
                 магазине. Собрали приложения, в которых это удобно делать. Все они доступны бесплатно, но у некоторых
                 есть платные версии — в них больше возможностей.</p>
-            <input type="text" v-model="item" placeholder="Введите задачу">
-            <button @click="add_list()" :disabled="item.trim() === ''">Добавить</button>
-            <hr>
-            <ul>
-                <li v-for="text_item in list">
-                    {{text_item}}
-                </li>
-            </ul>
+            <div class="todo_container">
+                <div class="todo_input">
+                    <input type="text" v-model="item" placeholder="Введите задачу">
+                    <button @click="add_list()" :disabled="item.trim() === ''">Добавить</button>
+                    <button @click="sort_list()" :disabled="list.length === 0">Сортировать</button>
+
+                </div>
+                <div class="todo_list">
+                    <ul>
+                        <li v-for="text_item in list">
+                            <div class="todo_item_block">
+                                <span> {{text_item, index}} </span><span @click="deleteItem(index)"
+                                    class="across">Удалить</span>
+                            </div>
+                            <div class="hr"></div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
