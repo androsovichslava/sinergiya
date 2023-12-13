@@ -3,7 +3,12 @@
 
 <template>
   <div class="welcome_wrapper">
-    <h1>Добро пожаловать</h1>
+    <div class="welcome_container">
+
+      <h1>Добро пожаловать!</h1>
+      <h2>Это моя домашня страница. Если кто-то интересуется моей деятельностью или хочет взять на работу на 2000$, то
+        милости прошу в меню Контакты</h2>
+    </div>
   </div>
 </template>
 
@@ -12,8 +17,12 @@
 
 .welcome_wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-family: Roboto;
   /* font-style: 20px; */
+}
+
+.welcome_container {
+  margin-top: 150px;
 }
 </style>
